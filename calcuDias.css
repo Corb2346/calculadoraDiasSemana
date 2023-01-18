@@ -1,40 +1,46 @@
-body{
+body {
 
     background-image: url(assets/images/degradadoAzul.jpg);
 
 }
+
 /* .col{
     border: 5px solid green;
 }
  */
-.main{
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 150px;
-    height:275px;
-    
+    height: 275px;
+
 }
 
 
-.actionContainer{
-    background-color: 
-    #c3e3fd;
+.actionContainer {
+    background-color:
+        #c3e3fd;
     padding-bottom: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-.titleContainer{
+
+.titleContainer {
     font-family: Tahoma, sans-serif;
-    background-color:#2196f3;
+    background-color: #2196f3;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+
 }
-h4{
+
+h4 {
     width: 55px;
     height: 28.8px;
 }
 
-input{
+input {
     border-radius: 4px;
+    border: none;
+    height: 30px;
 }
