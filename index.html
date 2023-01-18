@@ -18,31 +18,44 @@
     <div class="container text-center main align-items-center">
         <div class="row row-cols-1 justify-content-center align-items-center ">
             <!-- title -->
-            <div class="col col-sm-10 align-items-center "> <h1>Calculadora de Días De La Semana</h1> </div>
+            <div class="col col-sm-10 align-items-center titleContainer">
+                <h1>Calculadora de Días De La Semana</h1>
+            </div>
             <!--  action Container -->
-            <div class="col col-sm-10 align-items-center ">
+            <div class="col col-sm-10 align-items-center actionContainer ">
 
-                <div class="row row-cols-1 align-items-center ">
-                    <div class="col"> <h2>Introduce una fecha: </h2> </div>
+                <div class="row row-cols-1 align-items-center gy-3">
+                    <div class="col gy-4">
+                        <h2>Introduce una fecha: </h2>
+                    </div>
                     <div class="col ">
-                        <div class="row row-cols-lg-3 row-cols-md-1 row-cols-sm-1 ">
-                            <div class="col"> <label for="text"> <h4>Dia :</h4></label>  <input type="number" placeholder="Dia"> </div>
-                            <div class="col"> <label for="text"> <h4>Mes :</h4></label> <input type="number" placeholder="Mes">  </div>
-                            <div class="col"> <label for="text"><h4>Año :</h4></label> <input type="number" placeholder="Año"></div>
-   
-                          </div>
+                        <div class="row row-cols-lg-3 row-cols-md-1 row-cols-sm-1 gy-2">
+                            <div class="col"> <label for="text">
+                                    <h4>Dia:</h4>
+                                </label> <input type="number" placeholder="Dia"> </div>
+                            <div class="col"> <label for="text">
+                                    <h4>Mes:</h4>
+                                </label> <input type="number" placeholder="Mes"> </div>
+                            <div class="col"> <label for="text">
+                                    <h4>Año:</h4>
+                                </label> <input type="number" placeholder="Año"></div>
+
+                        </div>
 
                     </div>
                     <div class="col"> <button type="button" class="btn btn-dark">Calcular Fecha</button></div>
-                    <div class="col"> <h5> Es día Martes laboral! </h5></div>
-                    <div class="col"> <h5>Fase Lunar</h5></div>
+                    <div class="col">
+                        <h5> Es día Martes laboral! </h5>
+                    </div>
+                    <div class="col ">
+                        <h5>Fase Lunar</h5>
+                    </div>
                 </div>
-
-
             </div>
 
         </div>
     </div>
+
 
     <!-- JS file -->
     <script src="calcuDias.js"></script>

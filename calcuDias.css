@@ -1,18 +1,31 @@
-.col{
+body{
+
+    background-image: url(assets/images/degradadoAzul.jpg);
+
+}
+/* .col{
     border: 5px solid green;
 }
-
+ */
 .main{
     display: flex;
-    height:500px;
-    border: 5px darkblue dotted;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    height:275px;
 }
 
-h1{
+.actionContainer{
+    background-color: 
+    #c3e3fd;
+    padding-bottom: 10px;
+}
+.titleContainer{
     font-family: Tahoma, sans-serif;
+    background-color:#2196f3;
 
 }
-
-.btn-dark{
-    
+h4{
+    width: 55px;
+    height: 28.8px;
 }
