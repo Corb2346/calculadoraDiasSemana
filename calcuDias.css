@@ -4,10 +4,10 @@ body {
 
 }
 
-/* .col{
+/*  .col{
     border: 5px solid green;
-}
- */
+} */
+ 
 .main {
     display: flex;
     justify-content: center;

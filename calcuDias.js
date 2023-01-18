@@ -112,7 +112,7 @@ function calculateMoonPhase() {
 const getMoonPhase = valueMoonPhase => {
     switch (valueMoonPhase) {
         case 0:
-            return "Luna Nueva "
+            return "Luna Nueva"
 
         case 1:
             return "Luna Creciente Cóncava"
@@ -127,7 +127,7 @@ const getMoonPhase = valueMoonPhase => {
             return "Luna Llena"
 
         case 5:
-            return "Menguante Conveza"
+            return "Menguante Convexa"
 
         case 6:
             return "Cuarto Menguante"
