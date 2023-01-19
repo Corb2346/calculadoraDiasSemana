@@ -2,6 +2,8 @@
 const readDay = () => Number(document.getElementById("dia").value)
 const readMonth = () => Number(document.getElementById("mes").value)
 const readYear = () => Number(document.getElementById("anio").value)
+const displayDayOfWeek = () => document.getElementById("result")
+const displayYearLeap = () => document.getElementById("añoBiciesto");
 
 let adviceCounter =0;
 
@@ -97,13 +99,13 @@ const checkDay = numberOfDay => {
 }
 
 const displayDay = foundDay => {
-    document.getElementById("result").innerText = `Es día ${foundDay}`;
+    displayDayOfWeek().innerText = `Es día ${foundDay}`;
 }
 
 const displayLeapYear = (confirm) => {
     if(confirm)
-    document.getElementById("añoBiciesto").innerHTML =( "Año Biciesto")
-    else document.getElementById("añoBiciesto").innerHTML =( "Año Normal")
+    displayYearLeap().innerHTML =( "Año Biciesto")
+    else displayYearLeap().innerHTML =( "Año Normal")
 
 }
 
