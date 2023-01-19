@@ -1,24 +1,58 @@
 
-const readDay = () => document.getElementById("dia").value
-const readMonth = () => document.getElementById("mes").value
-const readYear = () => document.getElementById("anio").value
+const readDay = () => Number(document.getElementById("dia").value)
+const readMonth = () => Number(document.getElementById("mes").value)
+const readYear = () => Number(document.getElementById("anio").value)
+
+let adviceCounter =0;
+
+const validateInputs = () => {
+    day = readDay();
+    month = readMonth();
+    year = readYear();
+
+    if(day>0 && day<32 && month>0 && month< 13 && year >= 1970 && year<=2030 ) return true
+    else alert("Campos faltantes") //missingInput();
+ 
+}
+
+/* const missingInput = () => {
+    if(adviceCounter!=0){
+        console.log("estoy en missing input");
+        let advice = document.createElement("div");
+    advice.innerText = "Información Faltante";
+    document.getElementById("calculateBtn").appendChild(advice);
+    adviceCounter++;
+    } else null
+} */
+
+const isLeapYear = year =>{
+    return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+    }
 
 function calculateDate() {
 
-    let date = readValues();
-    let dateCreated = setDate(date);
-    console.log(dateCreated);
-    console.log(typeof (dateCreated));
-    let numberDay = dateCreated.getDay();
-    console.log(numberDay);
-    console.log(typeof (numberDay));
+    let validation = validateInputs();
+    console.log(validation);
+    if(validation){
+        let date = readValues();
+        let dateCreated = setDate(date);
+        console.log(dateCreated);
+        console.log(typeof (dateCreated));
+        let numberDay = dateCreated.getDay();
+        console.log(numberDay);
+        console.log(typeof (numberDay));
 
-    let foundDay = checkDay(numberDay);
-    console.log("tu dia es" + foundDay);
-    let valueMoonPhase = calculateMoonPhase();
-    let  moonPhase = getMoonPhase(valueMoonPhase);
-    displayMoonPhase(moonPhase);
-    displayDay(foundDay);
+        let confirmLeapYear = isLeapYear(year);
+        console.log("Es año biciesto: "+confirmLeapYear);
+        displayLeapYear(confirmLeapYear);
+        let foundDay = checkDay(numberDay);
+        console.log("tu dia es" + foundDay);
+        let valueMoonPhase = calculateMoonPhase();
+        let  moonPhase = getMoonPhase(valueMoonPhase);
+        displayMoonPhase(moonPhase);
+        displayDay(foundDay);
+    } 
+    
 
 }
 
@@ -64,6 +98,13 @@ const checkDay = numberOfDay => {
 
 const displayDay = foundDay => {
     document.getElementById("result").innerText = `Es día ${foundDay}`;
+}
+
+const displayLeapYear = (confirm) => {
+    if(confirm)
+    document.getElementById("añoBiciesto").innerHTML =( "Año Biciesto")
+    else document.getElementById("añoBiciesto").innerHTML =( "Año Normal")
+
 }
 
 function calculateMoonPhase() {

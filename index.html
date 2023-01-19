@@ -25,29 +25,36 @@
             <div class="col col-sm-10 align-items-center actionContainer ">
 
                 <div class="row row-cols-1 align-items-center gy-3">
+
                     <div class="col gy-4">
                         <h2>Introduce una fecha: </h2>
                     </div>
-                    <div class="col ">
+                    <!-- input container -->
+                    <form class="col">
                         <div class="row row-cols-lg-3 row-cols-md-1 row-cols-sm-1 gy-3">
-                            <div class="col"> <label for="text">
+
+                            <div class="col " id="dayColumn"> <label for="text">
                                     <h4>Dia:</h4>
-                                </label> <input type="text" placeholder="Dia" id="dia"> </div>
-                            <div class="col"> <label for="text">
+                                </label> <input type="number" placeholder="Dia" id="dia">
+                            </div>
+                            <div class="col" id="monthColumn"> <label for="text">
                                     <h4>Mes:</h4>
-                                </label> <input type="text" placeholder="Mes" id="mes"> </div>
-                            <div class="col"> <label for="text">
+                                </label> <input type="number" placeholder="Mes" id="mes">
+                            </div>
+                            <div class="col" id="yearColumn"> <label for="text">
                                     <h4>Año:</h4>
-                                </label> <input type="text" placeholder="Año" id="anio"></div>
+                                </label> <input type="number" placeholder="Año" id="anio"> </div>
 
+                            <div class="col-lg-12">
+                                <input type="button" class="btn btn-dark" id="calculateBtn" onclick="calculateDate()"
+                                    value="Calcular Fecha" />
+                            </div>
                         </div>
-
+                    </form>
+                    <!-- answer container -->
+                    <div class="col">
+                        <h5 id="añoBiciesto">Tipo de Año:</h5>
                     </div>
-                    <div class="col"> <button type="button" class="btn btn-dark" onclick="calculateDate()">Calcular
-                            Fecha</button></div>
-                    <div class="col"> <label for="text">
-                            <h5>Tipo de Año:</h5>
-                        </label> <input type="text" placeholder="Normal o Biciesto"></div>
 
                     <div class="col">
                         <h5 id="result"> Tu dia es...</h5>
@@ -55,9 +62,9 @@
                     <div class="col ">
                         <h5 id="moonphase">Fase Lunar</h5>
                     </div>
-                    <div class="col ">
+                    <!--   <div class="col ">
                         <h5 id="moonphase">Imagen de la luna</h5>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
