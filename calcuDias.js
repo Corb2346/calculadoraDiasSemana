@@ -99,7 +99,9 @@ const checkDay = numberOfDay => {
 }
 
 const displayDay = foundDay => {
-    displayDayOfWeek().innerText = `Es día ${foundDay}`;
+    if(foundDay == "Sábado" || foundDay == "Domingo")
+    displayDayOfWeek().innerText = `Es día ${foundDay}, No laboral`;
+    else displayDayOfWeek().innerText = `Es día ${foundDay}, Laboral`;
 }
 
 const displayLeapYear = (confirm) => {
