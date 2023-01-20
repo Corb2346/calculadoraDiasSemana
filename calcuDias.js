@@ -5,7 +5,7 @@ const readYear = () => Number(document.getElementById("anio").value)
 const displayDayOfWeek = () => document.getElementById("result")
 const displayYearLeap = () => document.getElementById("añoBiciesto");
 
-let adviceCounter =0;
+//let adviceCounter =0;
 
 const validateInputs = () => {
     day = readDay();
@@ -13,7 +13,7 @@ const validateInputs = () => {
     year = readYear();
 
     if(day>0 && day<32 && month>0 && month< 13 && year >= 1970 && year<=2030 ) return true
-    else alert("Campos faltantes") //missingInput();
+    else alert("Introduce un dia entre 1-31 / mes entre 1-12 / año entre 1970 - 2030 ") //missingInput();
  
 }
 
@@ -34,23 +34,19 @@ const isLeapYear = year =>{
 function calculateDate() {
 
     let validation = validateInputs();
-    console.log(validation);
+
     if(validation){
         let date = readValues();
         let dateCreated = setDate(date);
-        console.log(dateCreated);
-        console.log(typeof (dateCreated));
         let numberDay = dateCreated.getDay();
-        console.log(numberDay);
-        console.log(typeof (numberDay));
-
         let confirmLeapYear = isLeapYear(year);
-        console.log("Es año biciesto: "+confirmLeapYear);
+
         displayLeapYear(confirmLeapYear);
         let foundDay = checkDay(numberDay);
-        console.log("tu dia es" + foundDay);
+       
         let valueMoonPhase = calculateMoonPhase();
         let  moonPhase = getMoonPhase(valueMoonPhase);
+        
         displayMoonPhase(moonPhase);
         displayDay(foundDay);
     } 
